@@ -162,7 +162,7 @@ export default {
     }
   },
   async created($axios) {
-    let res = await this.$axios.get('http://127.0.0.1:5000/get_all')
+    let res = await this.$axios.get('http://127.0.0.1:5000/users')
     this.dataFetch = res.data
   },
   methods: {

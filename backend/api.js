@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
   
   next();
 });
-  app.get('/get_all', (req, res) => {
+  app.get('/users', (req, res) => {
     db.all(`SELECT * FROM users`, function(err, row){
         if(err){
             // console.log(err);
