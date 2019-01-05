@@ -19,20 +19,14 @@ app.use(function(req, res, next) {
   
   next();
 });
-  app.get('/', (req, res) => {
-   
+  app.get('/get_all', (req, res) => {
     db.all(`SELECT * FROM users`, function(err, row){
         if(err){
-            console.log(err);
-            res.send(err)
-            res.status(500)
+            // console.log(err);
+            res.status(500).send(err)
         }else{
             res.status(200).send(row);
         }
-        
-        
     });
-      
   })
-
 app.listen(5000, () => console.log(' port 5000!')) 
